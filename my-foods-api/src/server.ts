@@ -1,6 +1,5 @@
 import * as express from 'express'
 import * as dotenv from 'dotenv'
-// import {router} from './routes/public'
 import {dbConnect} from './config/db'
 
 // config
@@ -13,9 +12,6 @@ app.use(express.urlencoded({extended: true}))
 
 // db
 dbConnect()
-
-// routes
-// app.use(router)
 
 // server
 const server = app.listen(process.env.SERVER_PORT, ()=> {
